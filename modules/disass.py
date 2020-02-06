@@ -39,15 +39,3 @@ def sym_freq(disassembled):
 
 def get_features(file):
 	return sym_freq ( disassemble(file) )
-
-"""i = 0
-files = get_file_list(directory)[1:3]
-for file in files :
-	try:
-		disassemble(file)
-	except:
-		print(file + "Error while disassembling")
-		continue
-	i+=1
-	print(i,end="\r")
-print(i)"""
