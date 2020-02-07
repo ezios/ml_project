@@ -19,7 +19,7 @@ def disassemble(file):
 		if pe.FILE_HEADER.Machine == 0x14c:
 			cs = Cs(CS_ARCH_X86, CS_MODE_32)
 		else : 
-			cs = Cs(CS_ARCH_X86,CS_MODE_32)
+			cs = Cs(CS_ARCH_X86,CS_MODE_64)
 		for i in cs.disasm(data, 0x1000):
 			ops.append(i.mnemonic + " "+ i.op_str)
 
