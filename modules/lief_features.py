@@ -15,13 +15,13 @@ with open("data/top_160_libs.pickle","rb") as f :
 def get_flags(exe):
     # quarkslabs propriétés des PE , renvoie 1 si le PE possède 
     #la propriété et 0 sinon 
-    pe_properties = ["has_configuration", "has_debug", "has_exceptions",
+    pe_sections = ["has_configuration", "has_debug", "has_exceptions",
                      "has_exports", "has_import", "has_nx",
                      "has_relocations", "has_resources",
                      "has_rich_header", "has_signature", "has_symbol",
                      "has_tls"]
     temp = []
-    for has in pe_properties:
+    for has in pe_sections:
         if getattr(exe, has):
             temp.append(1.0)
         else:
