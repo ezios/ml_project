@@ -37,17 +37,17 @@ def histogram(raw):
 
 # histogramme sur le nombre de fonctions appelées dans une dll
 def libcount(exe):
-    current_pe_lib = {}
+    pe_dll = {}
     number_of_functions = []
     global common_libraries
 
     for dll in exe.imports:
-        current_pe_lib.update( { dll.name.lower() : float(len(dll.entries)) } )
+        pe_dll.update( { dll.name.lower() : float(len(dll.entries)) } )
+#    eg   	from     "kernell32"                12  			functions has been imported 
+    for func in common_libraries:
+        if func in pe_dll:
 
-    for lib in common_libraries:
-        if lib in current_pe_lib:
-
-            number_of_functions.append(current_pe_lib[lib])
+            number_of_functions.append(pe_dll[func])
 
         else:
 
