@@ -36,8 +36,8 @@ if __name__ == '__main__':
 		print ("File not exist")
 		sys.exit()
 
-	model_path = "C:/Downloads/model.json"
-	h5 = "C:/Downloads/model.h5"
+	model_path = "../data/model.json"
+	h5 = "../data/model.h5"
 
 	with open(model_path, 'r') as f:
     	loaded_model_json = f.read()
