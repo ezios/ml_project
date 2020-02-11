@@ -5,11 +5,12 @@ import lief
 import hashlib
 import numpy as np
 import pickle
+import os
 
 
 
 
-with open("data/top_160_libs.pickle","rb") as f :                
+with open("../data/top_160_libs.pickle","rb") as f :                
     common_libraries = pickle.load(f)
 
 def get_flags(exe):
