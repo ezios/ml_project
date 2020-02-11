@@ -16,7 +16,7 @@ def features(file):
 	return np.concatenate([a,b])
 
 def get_nature(file_features):
-	prediction = loaded_model.predict_classes(Xnew)[0][0]
+	return loaded_model.predict_classes(Xnew)[0][0]
 
 
 
