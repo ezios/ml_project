@@ -1,4 +1,4 @@
-#pip3 install -r requirements.txt
+# pip3 install -r requirements.txt
 capstone==4.0.1
 cryptography==2.6.1
 entrypoints==0.3
