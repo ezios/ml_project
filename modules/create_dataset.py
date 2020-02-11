@@ -7,15 +7,15 @@ from pandas.plotting import scatter_matrix
 debug=0
 
 # load pickle dumped malware and benign features with their hashes , libs are the common libs in our dataset
-with open("zip/b_features","rb") as bf , \
-     open("zip/b_hashes","rb") as bh,\
-     open("zip/m_features","rb") as mf ,\
-     open("zip/m_hashes","rb") as mh, \
-     open("zip/disass_mm_features","rb") as dmf ,\
-     open("zip/disass_mm_hashes","rb") as dmh ,\
-     open("zip/disass_b_features","rb") as dbf,\
-     open("zip/disass_b_hashes","rb") as dbh ,\
-     open("zip/top_libs","r") as f:
+with open("../data/b_features","rb") as bf , \
+     open("../data/b_hashes","rb") as bh,\
+     open("../data/m_features","rb") as mf ,\
+     open("../data/m_hashes","rb") as mh, \
+     open("../data/disass_mm_features","rb") as dmf ,\
+     open("../data/disass_mm_hashes","rb") as dmh ,\
+     open("../data/disass_b_features","rb") as dbf,\
+     open("../data/disass_b_hashes","rb") as dbh ,\
+     open("../data/top_libs","r") as f:
         benfeatures = pickle.load(bf)
         benhashes   = pickle.load(bh)
         malfeatures = pickle.load(mf)
@@ -95,4 +95,4 @@ colnames = h_features+hbytes+libs+symb+["classe"]
 
 dataset = pandas.DataFrame(t_array, index=rownames, columns=colnames)
 
-dataset.to_csv(r"C:\downloads\dataset2.csv",index=False)
+dataset.to_csv(r"../data/dataset2.csv",index=False)
