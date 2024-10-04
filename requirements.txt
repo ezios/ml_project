@@ -1,5 +1,5 @@
 # pip3 install -r requirements.txt
-capstone==4.0.1
+capstone==6.0.0a1
 cryptography==2.6.1
 entrypoints==0.3
 h5py==2.10.0
